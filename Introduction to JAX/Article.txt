@@ -1,0 +1,82 @@
+JAX (short for "just another XLA") is a Python library developed by Google that provides a framework for high-performance numerical computation and automatic differentiation. JAX was created with the goal of providing an easy-to-use platform for machine learning researchers and developers to implement and experiment with complex algorithms, while still maintaining the performance benefits of low-level optimized code.
+
+Introduction
+
+JAX is a library for numerical computation and machine learning, developed by Google. It is built on top of the NumPy library and provides many of the same features and functionalities. However, unlike NumPy, JAX is designed to take full advantage of hardware accelerators, such as GPUs and TPUs, to perform computations efficiently.
+
+JAX provides an extensive collection of tools for building, training, and deploying machine learning models. It includes a wide range of neural network architectures and optimization algorithms, as well as tools for automatic differentiation, which is a powerful technique for computing gradients of complex functions.
+
+One of the key features of JAX is its support for function transformations, which allows users to write functions that can be transformed into efficient, vectorized code that can run on a variety of hardware platforms. This makes it easy to write code that is both easy to read and write, and fast and efficient.
+
+JAX is also designed to be very composable, allowing users to combine and reuse different components to build more complex models and algorithms. It integrates well with other popular machine learning libraries, such as TensorFlow and PyTorch, making it easy to incorporate JAX into existing workflows.
+
+Overall, JAX is a powerful library that can be used for a wide range of numerical and machine learning tasks, and is particularly well-suited for large-scale, distributed computations on hardware accelerators.
+
+Features of JAX: 
+
+NumPy compatibility: JAX is built on top of NumPy, so users can write code in a familiar style and easily transition between NumPy and JAX functions.
+High-performance numerical computation: JAX is built on top of Google's XLA compiler, which can optimize computations for both CPUs and GPUs. This makes it well-suited for large-scale numerical computations and deep learning tasks.
+Auto differentiation: JAX provides automatic differentiation capabilities, which can be used to calculate gradients of functions with respect to their inputs, allowing for the implementation of complex optimization algorithms like stochastic gradient descent.
+Accelerated computation: JAX leverages XLA, a domain-specific compiler for linear algebra that can optimize computations for GPUs and TPUs, providing significant speed improvements.
+Function transformations: JAX includes a set of powerful function transformations, such as jit (just-in-time compilation), vmap (vectorization), and pmap (parallelization), which allow users to optimize their code for different hardware architectures and batch sizes.
+Interoperability with other machine learning frameworks: JAX is compatible with popular machine learning frameworks like TensorFlow and PyTorch, which means that JAX functions can be integrated into larger machine learning pipelines and frameworks.
+
+JAX has gained popularity in the machine learning community due to its ease of use, compatibility with popular machine learning frameworks like TensorFlow and PyTorch, and its ability to run efficiently on both CPUs and GPUs.
+
+To install JAX, you can use the following command in your terminal or command prompt:
+
+pip install jax 
+
+pip install jaxlib
+
+This command will install both JAX and JAXlib, which is a separate library that provides low-level support for JAX operations.
+
+If you want to install JAX with GPU support, you will need to make sure that you have the appropriate drivers and libraries installed on your system. JAX currently supports CUDA-enabled NVIDIA GPUs.
+
+Example
+
+Python3
+
+import jax.numpy as jnp
+
+x = jnp.array([1, 2, 3, 4])
+y = jnp.dot(x, x)
+
+print(y)
+
+
+
+ 
+
+
+
+
+The given code computes the dot product of a NumPy array x with itself using the jnp.dot() function from the JAX library. The result is stored in the variable y and is printed using the print() function.
+
+The problem statement for this code could be to compute the square of the Euclidean norm of a vector represented by the NumPy array x. The square of the Euclidean norm of a vector is equal to the dot product of the vector with itself, which is computed by the jnp.dot() function in this code.
+
+Alternatively, the problem statement could be to find the sum of the squares of the elements in a NumPy array x. This is equivalent to computing the dot product of x with itself, as each element in x is squared and then summed together.
+
+Python3
+
+import jax.numpy as jnp
+from jax import grad
+
+def f(x):
+    return jnp.sin(x)
+
+grad_f = grad(f)
+
+x = jnp.pi / 4
+df_dx = grad_f(x)
+
+print(df_dx)
+
+
+
+
+In this code, we define a function f(x) that takes a JAX NumPy array x and returns the sine of x. We then use the grad() function from JAX to compute the gradient of f with respect to x, and store the result in a new function grad_f. Finally, we evaluate grad_f at x = pi/4 and print the result.
+
+The grad() function performs automatic differentiation on the function f to compute its gradient. Automatic differentiation is a technique for computing the gradient of a function by evaluating the function and its derivatives at specific points. It is used in machine learning and other numerical optimization applications to efficiently compute the gradients of functions that are too complex to compute analytically.
+
+The code above demonstrates how to use JAX to compute the gradient of a simple function using automatic differentiation.

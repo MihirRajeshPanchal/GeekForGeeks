@@ -1,0 +1,41 @@
+Hybrid programming is a programming approach that combines different programming paradigms or styles in a single application. It involves using elements from both object-oriented programming and functional programming, for example, or mixing imperative programming with declarative programming.
+
+It is possible to use both Dart and Python in a single project, although the way in which they are used will depend on the specific requirements of the project. Here are a few options for using both languages in a hybrid programming project:
+
+Use Dart and Python in separate parts of the project: Depending on the project, it may be possible to use Dart for some parts of the project and Python for others. For example, you could use Dart for the front end of a web application and Python for the back end.
+Use the DartPy library which is a wrapper library to call Python code from Dart in the Dart environment. This is useful if you have existing Python code that you want to use in a Dart project, or if you want to use the libraries and frameworks available in Python in your Dart project.
+
+Working at DartPy Library
+
+For Python to run in the dart programming language a dart library is required to be included in the environment of flutter. The library should call out python codes by using Python C-API embedding and dart:ffi to call native C APIs.
+
+Working of DartPy Library
+Working of DartPy Library
+
+In the diagram above, the dart library calls Python C-API Embedding and dart:ffi which helps embed python code in an extendable c/c++ format style of coding which is understandable to dart programming language’s interpreters. The Dart library then is imported into the flutter environment. Dynamic pathing of code is easily done with the encapsulation of dart libraries. A mixed programming language approach of Python and Dart is applied but the configuration of the python path with the dart library must be done in order to run python in the dart library. This is done by providing command line configuration while installing the dart library and also via plugins with the dart library.
+
+Methodology and Steps to Achieve Hybrid Programming
+
+Dart programming language provides the functionality of providing a rich set of core libraries along with additional APIs available. But these libraries are bound to the dart programming language. Additionally, to provide hybrid programming in the dart programming language the DartPy additional API is used to achieve hybrid programming in mobile application development. The DartPy library is added to the dart programming environment by importing it into the main.dart file. Additionally, all the dependencies are added to the project by the pubspec.yaml file.
+Below are the steps to follow to implement the hybrid programming of Dart with Python
+
+Create a Flutter Project and open the terminal of your project.
+Install the dartpy library by the following command: dart pub add dartpy OR flutter pub add dartpy
+Run the pub get command and check the pubspec.yaml file for the dependency
+Import the library by adding the import statement to the dart file: import 'package:dartpy/dartpy.dart';
+
+After importing the library, flutter developers can use the methods in the DartPy Library by simply calling them. The dartpyc.Py\_Initialize(); line of code is used to initialize the python object instance in the dart programming environment. The Python code is then stored in a dart string variable. The dart string variable is then converted to nativeutf8 by dart:ffi library. After the conversion, the python code is executed using the dartPy library. A sample code for hybrid programming of python is given below.
+
+void main(List<String> args) {
+   dartpyc.Py_Initialize();
+   final python = '''
+   from time import time, ctime
+   print("Today is", ctime(time()))
+   ''';
+   final pystring = python.toNativeUtf8();
+   dartpyc.PyRun_SimpleString(pystring.cast<Int8>());
+   malloc.free(pystring);
+   print(dartpyc.Py_FinalizeEx());
+}
+
+Python is integrated with the dart by the above-given source code. The DartPy library is been initialized and is been made ready to use. The Python code is been written into a dart string. The dart string is then converted into C strings encoded with UTF-8. The converted C string encoded with UTF-8 is then run with the python interpreter through the dartpy library. The output from the python code is then made used by the dart for implementing mobile application features and functionality.
