@@ -1,0 +1,56 @@
+AWS Lambda is the new computing system that offers a variety of benefits like real-time data processing and custom back-end service. With so much information available about AWS Lambda, it can be hard to know what it is without an introduction. 
+
+AWS Lambda is a serverless compute service provided by Amazon Web Services (AWS) that allows you to run code without having to manage servers. With AWS Lambda, you can simply upload your code and the service will automatically execute it in response to various events, such as changes to data in an Amazon S3 bucket, or incoming requests to an API Gateway.
+
+AWS Lambda supports a wide variety of programming languages, including Node.js, Python, Java, Go, Ruby, and C#. You can also use custom runtimes to run code in other languages.
+
+One of the key benefits of AWS Lambda is its scalability. Since you don't have to manage servers, you can easily scale up or down based on demand, without having to worry about provisioning or de-provisioning servers.
+
+AWS Lambda also integrates with other AWS services, such as Amazon S3, Amazon DynamoDB, and Amazon API Gateway, allowing you to build powerful serverless applications with minimal infrastructure overhead.
+
+AWS Lambda
+
+Here's a breakdown of the introduction in the form of frequently asked questions about this system, to help a person determine if it's the right option or not.
+
+What is AWS Lambda? AWS Lambda is an Amazon serverless computing system that runs code and automatically manages the underlying computing resources. It is an event-driven compute service. It lets a person automatically run code in response to many types of events, such as HTTP requests from the Amazon API gateway, table updates in Amazon DynamoDB, and state transitions. It also enables the person to extend to other AWS services with custom logic and even creates its own back-end services. For example, just write the code and then upload it as a .zip file or any container image. The service works by running code on high-availability computer infrastructure. It then performs all the administrative duties of that compute resource such as:
+
+Providing maintenance on the server and operating system,
+Automatically scaling and managing the person's capacity provisions,
+Handling security patch deployment
+Lambda extensions
+Code Monitoring
+Logging
+Concurrency
+Function Blueprints
+How Does AWS Lambda Work? While AWS Lambda may seem confusing at first, it really isn't. In fact, it's actually just a simple process:
+
+Write your code: The first step is to write the code that you want to run in AWS Lambda. You can use any of the supported programming languages, such as Node.js, Python, Java, Go, Ruby, or C#.
+Package your code: Once you've written your code, you need to package it into a ZIP file along with any dependencies that it requires.
+Upload your code: You can upload your code to AWS Lambda using the AWS Management Console, AWS CLI, or AWS SDKs.
+Configure your Lambda function: After you've uploaded your code, you need to configure your Lambda function. This involves specifying the function's name, runtime, memory allocation, and any event triggers that will invoke the function.
+Test your Lambda function: You can test your Lambda function using the AWS Management Console, AWS CLI, or AWS SDKs.
+Monitor and troubleshoot your Lambda function: Once your Lambda function is deployed and running, you can monitor its performance using AWS CloudWatch logs and metrics. If you encounter any issues, you can use CloudWatch to troubleshoot errors and performance issues.
+Update and redeploy your code: If you need to update your Lambda function, you can simply upload a new version of your code and AWS Lambda will automatically create a new version of the function. You can then configure your triggers to use the new version of the function.
+What are the Advantages of AWS Lambda? AWS Lambda offers a variety of benefits to its users. Here are 8 of the biggest benefits one should know about when deciding if AWS Lambda is the right choice:
+
+It doesn't require the user to manage any servers. Since AWS Lambda automatically runs the user's code, there's no need for the user to manage the server. Simply write the code and upload it to Lambda.
+It empowers the user to easily scale. AWS Lambda runs code in response to each trigger, so the user's application is automatically scaled. The code also runs in parallel processes, each triggered individually, so scaling is done precisely with the size of the workload.
+It's affordable. With AWS Lambda, one doesn't pay anything when the code isn't running. The user has to only be charged for every 100ms of code execution and the number of times his code is actually triggered.
+Fast execution: AWS Lambda functions can be executed in milliseconds, making them ideal for use cases where low latency is critical, such as real-time data processing or web and mobile applications.
+Reduced operational complexity: Because AWS Lambda is a fully managed service, it reduces the operational complexity associated with managing servers and infrastructure. This allows developers to focus on writing code and building applications rather than worrying about infrastructure management.
+Easy to deploy and manage: AWS Lambda makes it easy to deploy and manage your code. You simply upload your code, set up your triggers, and AWS Lambda takes care of the rest. This can save you time and reduce the risk of errors associated with manual deployments.
+Improved developer productivity: Because AWS Lambda removes the need to manage infrastructure, developers can focus on writing code and building applications. This can improve productivity and allow you to deliver new features and functionality faster.
+Built-in fault tolerance: AWS Lambda automatically replicates your code across multiple availability zones, providing built-in fault tolerance and ensuring that your code remains available even if one availability zone goes down.
+What Can You Build with AWS Lambda? AWS Lambda can build a variety of things. Here's a quick list of just a few use cases for it:
+
+Data processing
+Real-time file processing
+Data validation
+Filtering
+Sorting
+Real-time stream processing
+3rd-party API requests
+
+Own Backend How Much Does AWS Lambda Cost? As previously mentioned, with AWS Lambda user only pays for what he uses, factoring in the number of requests and duration of the execution of the code. No charges are taken for creating lambda functions. Lambda considers a request to be each time it starts executing in response to a trigger such as an event notification or an invocation volume. The duration of the code is calculated from the moment the code begins executing until it returns or is terminated. If one is unsure about whether AWS Lambda is the right choice or not, there is a free tier option available to try. This option includes 1M free requests per month and 400,000 GB-seconds of compute time per month.
+
+References: To learn more about AWS Lambda, check out Amazon's handy AWS Lambda FAQ

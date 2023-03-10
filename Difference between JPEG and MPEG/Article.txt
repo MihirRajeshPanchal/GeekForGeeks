@@ -1,0 +1,45 @@
+JPEG: JPEG stands for Joint Photographic Experts Group. .jpg and .jpeg extensions are used to store image in this format. It uses lossy compression algorithm, it means some of the image data is lost.
+
+MPEG: MPEG stands for Moving Picture Experts Group is a standard used for compressing digital video files. It is also a lossy compression method, but it is optimized for compressing moving images rather than still images. 
+
+S. NO.      
+
+JPEG 
+
+MPEG
+
+1
+
+JPEG stands for Joint Photographic Experts Group
+
+MPEG stands for Moving Picture Experts Group
+
+2
+
+JPEG is primarily used for Web images, digital cameras, other devices that capture still images
+
+MPEG is primarily used for Movies, TV shows, video clips on the web
+
+3
+
+JPEG is mainly used for image compression
+
+MPEG has various standards for audio and video compression
+
+4
+
+Compression ratio of JPEG files is typically 10:1
+
+Compression ratio of MPEG files can vary from 20:1 or higher depending on the video content 
+
+5
+
+Compressed as a single JPEG File
+
+Compressed as a series of frames using inter frame compression
+
+6
+
+Extensions used are .jpg and .jpeg.
+
+Extensions used are .mp3 and .mp4.

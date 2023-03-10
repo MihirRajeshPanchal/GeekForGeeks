@@ -1,0 +1,29 @@
+TTSVoice transforms written text into spoken language. TTSVoice python library analyse text using natural language processing algorithms to produce synthetic speech that mimics human speech. Applications for this technology range from language translators to digital assistants like Siri and Alexa, to assistive solutions for those with visual impairments.
+
+To install and implement text to speech technology in python the run the following command
+
+pip install ttsvoice
+
+The ttsvoice python packages provides the tts() function to implement text to speech functionality
+
+Syntax : 
+
+tts(text,voice,tempo)
+
+Parameters of tts() function
+
+text : Pass any python string or python string variable as the first argument. The text parameter is mandatory.
+
+voice : Pass "male" or "female" to change the pitch of the voice according to gender. It is an optional parameter. The default parameter is "female"
+
+tempo : Pass "high" , "normal" or "low" to change the rate of words per 1 second. It is an optional parameter. The default parameter is "normal"
+
+Code Implementation
+
+Python3
+
+from ttsvoice import tts
+
+tts("Hello from GFG")
+tts("Hello from GFG","male")
+tts("Hello from GFG","female","low")
