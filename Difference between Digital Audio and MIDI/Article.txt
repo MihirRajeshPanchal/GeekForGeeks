@@ -1,0 +1,57 @@
+Digital Audio: Binary data is used to represent sound in digital audio. It entails transforming analogue sound waves into a digital version that can be stored, handled, and transferred using digital technology.
+
+MIDI: Using a common set of commands and messages, the MIDI (Musical Instrument Digital Interface) protocol enables electronic musical instruments, computers, and other devices to communicate with one another. Instead of recording actual sound, it is a method of encoding musical notes and performance data as digital information.
+
+S. NO.     
+
+Digital Audio
+
+MIDI
+
+1
+
+A Digital Audio refers to the reproduction and transmission of sound stored in digital format
+
+A MIDI is a software for representing musical information in a digital format
+
+2
+
+Digital Representation of physical sound waves
+
+Abstract Representation of musical sound and sound effects
+
+3
+
+Digital Audio comprises of analog sound waves that are converted into a series of 0s and 1s.
+
+MIDI comprises of a series of commands that represent musical notes, volume, and other musical parameters.
+
+4
+
+Actual Sound is stored in digital audio file
+
+No actual sound is stored in MIDI file
+
+5
+
+Files are large in size and are loose
+
+Files are small in size and are compact
+
+6
+
+Quality of sound is in proportion to file size
+
+Quality of sound is not in proportion to file size
+
+7
+
+They reproduce the exact sound in a digital format
+
+They sound little different from original sound
+
+8
+
+Digital audio is used for recording and playback of music, sound effects, and voiceovers.
+
+MIDI is used for creating and controlling electronic music, such as synthesizers and drum machines
