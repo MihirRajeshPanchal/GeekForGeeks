@@ -1,0 +1,45 @@
+Extraction, Transformation , Load using Kettle
+
+
+Pentaho Data Integration also called as Kettle is used to preprocess the data obtained from different institutions.  The raw data is cleaned up in the kettle, by running through series of SQL commands in a job or a transformation. Let’s discuss the creation of a job or transformation in detail. We have used transformations to import the raw data from the MS access to MSSQL Server and Jobs are created to preprocess the data imported to the MSSQL server. We have created separate transformation and job files for all data received till now.
+ 
+
+Steps to create a transformation:
+
+1) Click on File-> New-> Transformation.
+2) Click on Input in the Design Tab and drag the “Microsoft Access Input” tool to the transformation layout. Click on the Microsoft Access Input to change its properties.
+
+For the File or directory option, click on browse and select the path of the input file has to be loaded and then click on add.
+Click on the Content menu and select the particular table from the inputted MS ACCESS Database that has to be imported to MSSQL Server.
+Click on the Fields menu and then on “Get fields” button to retrieve the fields from the loaded database and any naming or the data type of the fields can be changed by just editing the retrieved fields.
+You can click on “preview rows” to view the data that would be imported to the MSSQL Server and then click on OK.
+
+
+3) Now Click on Output in the Design tab and drag the “Table Output” tool to the transformation layout.
+4) Create a hop between the “Microsoft Access Input” and “Table Output”. It can be done either by selecting both and right click->create new hop or Hover over the “Microsoft Access Input” and the => would show up, connect it to the table output.
+5) Now to change the properties of the “Table Output” Click on the “Table Output” 
+
+Step Name: Give the Desired name
+Connection: Click on new to create a connection and in the new connection window select the MSSQL Server and give the Database properties.
+Connection Name: Give the Desired name
+Hostname Name: 10.128.247.167
+Database Name: Specify the Database name where the table should be created. All our intermediate tables were created in OAAIDBtest and the final results table were created in OAAIDBEitel
+Specify the Username, password and test the connection. click on OK.
+Specify the “Table name” for the new table to be created and select the truncate table checkbox.
+Click on SQL and execute the SQL Script, then click on OK. 
+Save the transformation and run it, the table should be generated in the specified database.
+
+Steps to create a Job in Kettle:
+
+Creating a job is very similar to that of the Transformation. We have used multiple “SQL” tool and linked them by creating hops between them. Each of the SQL tool has a set of SQL queries that has to be executed and the final preprocessed Database table is saved back to “OAAIDBEitel” Database.
+
+1) Click on File->New->Job.
+2) Click on Scripting from the Design Tab and drag it to the job Layout.
+3) Several SQL tools as per need are placed in the Layout and connected by hops as mentioned above.
+
+To change the properties of the SQL, Click on the SQL tool and execute the following,
+Job Entry Name: Give the Desired name.
+Connection: The Database Connection created in the above transformation can be shared to all other flows. It can be accomplished by clicking on view->Database Connections-> Right click on the Database connection that has to be shared and click on Share.
+
+4) Enter the SQL script that has to be executed and click on OK (Note: Each SQL Script should be terminated with a semi colon).
+5) Save the Job and Run it.
