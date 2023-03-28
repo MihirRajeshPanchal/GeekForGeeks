@@ -1,6 +1,8 @@
 Published
 https://www.geeksforgeeks.org/everything-you-need-to-know-about-open-source-development/
 https://www.geeksforgeeks.org/hybrid-programming-using-python-and-dart/
+https://www.geeksforgeeks.org/difference-between-jpeg-and-mpeg/
+https://www.geeksforgeeks.org/difference-between-digital-audio-and-midi/
 
 Improvement
 https://www.geeksforgeeks.org/what-is-sagemaker-in-aws/
